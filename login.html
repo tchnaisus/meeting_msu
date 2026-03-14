@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>เข้าสู่ระบบ - ระบบประชุมคณะ มหาวิทยาลัยมหาสารคาม</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="loading-bar"></div>
+    <main class="login-container">
+      <section class="card" aria-label="Login form">
+        <div class="brand">
+          <h1>ระบบงานประชุม MSU</h1>
+        </div>
+        <p>กรุณาเข้าสู่ระบบด้วยบัญชีของคุณ แล้วเลือก <br>บทบาทในการใช้งาน</p>
+
+        <form id="loginForm" autocomplete="on" novalidate>
+          <div class="form-group">
+            <label for="username">ชื่อผู้ใช้</label>
+            <input id="username" name="username" type="text" autocomplete="username" placeholder="ชื่อผู้ใช้" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">รหัสผ่าน</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" required />
+          </div>
+
+          <div class="form-group">
+            <a href="#" class="small-link">ลืมรหัสผ่าน?</a>
+          </div>
+
+          <div class="form-group">
+            <label for="role">บทบาท</label>
+            <select id="role" name="role" required>
+              <option value="">-- เลือกบทบาท --</option>
+              <option value="User">ผู้ใช้งาน</option>
+              <option value="Manager">ผู้บริหาร</option>
+              <option value="Admin">ผู้ดูแลระบบ</option>
+              <option value="Staff">เจ้าหน้าที่ / ภาควิชา</option>
+            </select>
+          </div>
+
+          <div class="button-group">
+            <button id="submitBtn" type="submit">เข้าสู่ระบบ</button>
+          </div>
+
+          <p class="help-text">
+            <br>หากคุณยังไม่มีบัญชี ให้ติดต่อผู้ดูแลระบบของมหาวิทยาลัย <br>เพื่อขอเปิดสิทธิ์
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <script src="assets/js/login.js"></script>
+  </body>
+</html>
